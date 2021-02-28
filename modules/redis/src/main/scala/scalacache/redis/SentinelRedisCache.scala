@@ -50,7 +50,7 @@ object SentinelRedisCache {
     * @param password password of the cluster
     * @param poolConfig config of the underlying pool
     */
-  def apply[V](clusterName: String, sentinels: Set[String], poolConfig: GenericObjectPoolConfig, password: String)(
+  def apply[V](clusterName: String, sentinels: Set[String], poolConfig: GenericObjectPoolConfig[_], password: String)(
       implicit config: CacheConfig,
       codec: Codec[V]
   ): SentinelRedisCache[V] =

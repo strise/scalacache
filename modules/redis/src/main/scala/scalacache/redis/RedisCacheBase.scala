@@ -1,13 +1,12 @@
 package scalacache.redis
 
-import java.io.Closeable
-
-import redis.clients.jedis._
-import redis.clients.util.Pool
-
+import redis.clients.jedis.commands.BinaryJedisCommands
+import redis.clients.jedis.util.Pool
 import scalacache.logging.Logger
 import scalacache.serialization.Codec
 import scalacache.{AbstractCache, CacheConfig, Mode}
+
+import java.io.Closeable
 import scala.concurrent.duration._
 import scala.language.higherKinds
 
